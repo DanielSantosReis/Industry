@@ -1,0 +1,41 @@
+.cor {
+    color: #54cf11;
+}
+
+.corbg {
+    background-color: #8cac7b;
+    width: 30%
+}
+
+
+label {
+    text-align: left;
+}
+
+input,
+textarea {
+    width: 50%;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 100;
+    color: #161616
+}
+
+#txtNome,
+#txtEmail,
+#txtAssunto {
+    margin-bottom: 1.9rem;
+}
+
+.texto {
+    width: 80vw;
+}
+
+.form {
+    width: 100vw;
+}
+
+.img {
+    width: 26vw;
+    margin-left: 10vw;
+}

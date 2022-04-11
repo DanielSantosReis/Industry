@@ -39,38 +39,34 @@ export class RegisterProductComponent implements OnInit {
     this.findAllFeedstock()
   }
 
-  
-
-
-findAllProduct(){
-  this.productService.getAllProduct().subscribe((resp: Product[]) => {
+  findAllProduct(){
+    this.productService.getAllProduct().subscribe((resp: Product[]) => {
     this.listProduct = resp
-  })
-}
+    })
+  }
 
-findByIdFeedstock() {
-  this.feedstockService.getByIdFeedstock(this.idFeedstock).subscribe((resp: Feedstock) => {
+  findByIdFeedstock() {
+    this.feedstockService.getByIdFeedstock(this.idFeedstock).subscribe((resp: Feedstock) => {
     this.feedstock = resp
-  })
-}
+    })
+  }
 
-findAllFeedstock() {
-  this.feedstockService.getAllFeedstock().subscribe((resp: Feedstock[]) => {
+  findAllFeedstock() {
+    this.feedstockService.getAllFeedstock().subscribe((resp: Feedstock[]) => {
     this.listFeedstock = resp
-  })
-}
+    })
+  }
 
-register() {
-  this.feedstock.id = this.idFeedstock
-  this.product.feedstock = this.feedstock
-  this.users.id = this.idUser
-  this.product.user = this.users
-  this.productService.postProduct(this.product).subscribe((resp: Product) => {this.product = resp
+  register() {
+    this.feedstock.id = this.idFeedstock
+    this.product.feedstock = this.feedstock
+    this.users.id = this.idUser
+    this.product.user = this.users
+    this.productService.postProduct(this.product).subscribe((resp: Product) => {this.product = resp
     alert('Product registered successfully')
-  this.findAllProduct()
-  this.product = new Product()
-  })
-}
-
+    this.findAllProduct()
+    this.product = new Product()
+    })
+  }
 
 }

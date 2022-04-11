@@ -1,0 +1,27 @@
+<div class="container-fluid mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center mb-5">Update Feedstock</h1>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-6">
+
+            <div class="form-group">
+                <label for="nome">Feedstock</label>
+                <input type="text" class="form-control" name='nome' id="nome" [(ngModel)]='feedstock.feedstock'>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description</label>
+                <input type="text" class="form-control" name='description' id="description"
+                    [(ngModel)]='feedstock.name'>
+            </div>
+
+            <div class="d-flex justify-content-center mt-4">
+                <button class="btn btn-danger mr-4" routerLink='/feedstock'>Cancel</button>
+                <button class="btn " (click)='update()'>Update</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,8 +1,8 @@
-<div *ngIf="auth.Logged()" class="container-fluid p-0 m-0 d-flex justify-content-center">
-    <!-- //*ngIf="authService.adm()"  >>> colocar depois de "<a" nos dois links abaixo p/ liberar acesso apenas p/ adm *** -->
+<div class="container-fluid p-0 m-0 d-flex justify-content-center">
+    <!-- *ngIf="auth.Logged()" //*ngIf="authService.adm()"  >>> colocar depois de "<a" nos dois links abaixo p/ liberar acesso apenas p/ adm *** -->
 
-    <a href="" class="btn corBotao text-secondary mr-3 my-3" routerLink="/categoria">Cadastre uma nova categoria</a>
-    <a href="" class="btn corBotao text-dark my-3" routerLink="/cadastro-produto">Cadastre um novo produto</a>
+    <a href="" class="btn corBotao text-white m-3 my-3" routerLink="/feedstock">Register a new raw material</a>
+    <a href="" class="btn corBotao text-white my-3" routerLink="/register-product">Register a new product</a>
 </div>
 <!-- */Cadastro de Produto e Categoria -->
 
@@ -12,7 +12,7 @@
         <div class="col-md-12">
             <hr />
             <h2 class="text d-flex justify-content-center text fs-30 corLetra">
-                Conheça nossos produtos
+                Here are the registered products
             </h2>
             <hr />
         </div>
@@ -23,9 +23,7 @@
 <!-- Nav-Produtos -->
 <ul class="nav nav-tabs d-flex justify-content-center my-4">
     <li class="nav-item">
-        <a class="nav-link active text-secondary font-weight-bold" id="nav-todosProdutos-tab" data-toggle="tab"
-            href="#todosProdutos" role="tab" aria-controls="nav-todosProdutos" aria-selected="true">Todos os
-            produtos</a>
+        <a class="nav-link active text-secondary font-weight-bold" id="nav-todosProdutos-tab" data-toggle="tab" href="#todosProdutos" role="tab" aria-controls="nav-todosProdutos" aria-selected="true">All the products</a>
     </li>
 </ul>
 <!-- produtos -->
@@ -35,12 +33,10 @@
     <div class="tab-pane fade show active" id="todosProdutos" role="tabpanel" aria-labelledby="nav-todosProdutos-tab">
         
         <!-- Pesquisa -->
-        <div class="row d-flex justify-content-center mt-2 mb-3">
-            <div class="col-md-4">
-                <div class="form-group">
-                    <input type="text" class="form-control" id="nome" placeholder="Digite o nome do produto desejado"
+        <div class="row d-flex justify-content-start mt-2 mb-3">
+            <div class="col-md-3">
+                    <input type="text" class="form-control" style="background-color: rgba(80, 83, 83, 0.212) ; width: 200px !important;" id="nome" placeholder="Enter the product name"
                         [(ngModel)]="nameProduct" (keyup)="findByNameProduct()" />
-                </div>
             </div>
         </div>
         <!-- Pesquisa -->
@@ -57,7 +53,6 @@
                     <p class="card-text">R${{ product.price }}</p>
                     <a class="btn corBotao text-white mb-4 mr-2"
                         [routerLink]="['/detalhe-produto', product.id]">Detalhes</a>
-                    <a class="btn corBotao text-white mb-4" routerLink="/contato">Contato</a>
                 </div>
             </div>
         </div>

@@ -13,6 +13,11 @@ import { ProductComponent } from './product/product.component';
 import { FeedstockComponent } from './feedstock/feedstock.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterProductComponent } from './register-product/register-product.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductDeleteComponent } from './delete/product-delete/product-delete.component';
+import { FeedstockDeleteComponent } from './delete/feedstock-delete/feedstock-delete.component';
+import { FeedstockEditComponent } from './edit/feedstock-edit/feedstock-edit.component';
+import { ProductEditComponent } from './edit/product-edit/product-edit.component';
 
 
 @NgModule({
@@ -24,7 +29,12 @@ import { RegisterProductComponent } from './register-product/register-product.co
     ProductComponent,
     FeedstockComponent,
     HomeComponent,
-    RegisterProductComponent
+    RegisterProductComponent,
+    ProductDetailComponent,
+    ProductDeleteComponent,
+    FeedstockDeleteComponent,
+    FeedstockEditComponent,
+    ProductEditComponent
   ],
   imports: [
     BrowserModule,

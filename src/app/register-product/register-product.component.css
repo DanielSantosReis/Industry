@@ -1,0 +1,7 @@
+.corBotao {
+    background-color: #265;
+}
+
+.corBotao:hover {
+    background-color: rgba(34, 102, 85, 0.678);
+}

@@ -1,0 +1,49 @@
+<div class="container my-5">
+
+    <div class="row">
+        <div class="clo-md-12">
+            <h1 class="text-center">Update Product</h1>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center my-5">
+        <div class="col-md-6">
+
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" name='name' id="name" placeholder="Enter the product name"
+                    [(ngModel)]="product.name">
+            </div>
+
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input type="text" class="form-control" name='price' id="price" placeholder="Enter product price" [(ngModel)]="product.price">
+            </div>
+
+            <div class="form-group">
+                <label for="quantitykg">Quantity</label>
+                <input type="text" class="form-control" name='quantitykg' id="quantitykg"
+                    placeholder="Enter the quantity in Kg of the product" [(ngModel)]="product.quantitykg">
+            </div>
+
+            <div class="form-group">
+                <label for="photo">Photo</label>
+                <input type="text" class="form-control" name='photo' id="photo" placeholder="Product photo link"
+                    [(ngModel)]="product.photo">
+            </div>
+
+            <div class="form-group">
+                <label for="text">Choose a raw material:</label>
+                <select class="form-control" name="text" id="text" [(ngModel)]='idFeedstock'
+                    (change)="findByIdFeedstock()">
+                    <option *ngFor="let item of listFeedstock" value="{{item.id}}">{{item.feedstock}}</option>
+                </select>
+            </div>
+
+            <div class="d-flex justify-content-center mt-4">
+                <button class="btn btn-danger mr-4" routerLink="/register-product">Cancel</button>
+                <button class="btn btn-info" (click)="update()">Update</button>
+            </div>
+        </div>
+    </div>
+</div>
