@@ -17,7 +17,7 @@ import { FeedstockEditComponent } from './edit/feedstock-edit/feedstock-edit.com
 
 
 const routes: Routes = [
-{ path:'', redirectTo:'login', pathMatch:'full'},
+{ path:'', redirectTo:'home', pathMatch:'full'},
 { path:'home', component: HomeComponent },
 { path:'about', component: AboutComponent },
 { path:'login', component: LoginComponent},

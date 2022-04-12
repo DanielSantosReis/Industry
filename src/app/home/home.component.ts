@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  name = environment.name
+  photo = environment.photo
+  id = environment.id
+  
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  exit(){
+    this.router.navigate(['/login'])
+    environment.photo = ''
+    environment.name = ''
+    environment.token = ''
+    environment.id = 0
   }
 
 }
