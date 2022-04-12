@@ -6,5 +6,5 @@ export class User {
     public email: string;
     public password: string;
     public photo: string;
-    public product: Product;
+    public product: Product[];
 }

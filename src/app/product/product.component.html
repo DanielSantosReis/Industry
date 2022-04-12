@@ -4,7 +4,6 @@
     <a href="" class="btn corBotao text-white m-3 my-3" routerLink="/feedstock">Register a new raw material</a>
     <a href="" class="btn corBotao text-white my-3" routerLink="/register-product">Register a new product</a>
 </div>
-<!-- */Cadastro de Produto e Categoria -->
 
 <!-- Title -->
 <div class="container-fluid p-0 m-0">
@@ -20,39 +19,39 @@
 </div>
 <!-- Title -->
 
-<!-- Nav-Produtos -->
+<!-- Nav-Products -->
 <ul class="nav nav-tabs d-flex justify-content-center my-4">
     <li class="nav-item">
         <a class="nav-link active text-secondary font-weight-bold" id="nav-todosProdutos-tab" data-toggle="tab" href="#todosProdutos" role="tab" aria-controls="nav-todosProdutos" aria-selected="true">All the products</a>
     </li>
 </ul>
-<!-- produtos -->
+<!-- products -->
 
-<!-- Cards Produtos -->
+<!-- Cards Products -->
 <div class="container d-flex justify-content-center">
     <div class="tab-pane fade show active" id="todosProdutos" role="tabpanel" aria-labelledby="nav-todosProdutos-tab">
         
-        <!-- Pesquisa -->
+        <!-- Search -->
         <div class="row d-flex justify-content-start mt-2 mb-3">
             <div class="col-md-3">
                     <input type="text" class="form-control" style="background-color: rgba(80, 83, 83, 0.212) ; width: 200px !important;" id="nome" placeholder="Enter the product name"
                         [(ngModel)]="nameProduct" (keyup)="findByNameProduct()" />
             </div>
         </div>
-        <!-- Pesquisa -->
+        <!-- Search -->
 
         <div class="card-columns mb-5">
             <div class="card mt-3 cardHover" *ngFor="let product of listProduct">
                 <img src="{{ product.photo }}" class="card-img-top" alt="img do produto"
-                    [routerLink]="['/detalhe-produto', product.id]" />
+                    [routerLink]="['/product-detail', product.id]" />
                 <div class="card-body text-center p-0">
                     
                     <h5 class="card-title mb-0">{{ product.name }}</h5>
                     <small>Feedstock: {{ product.feedstock.feedstock }}</small>
-                    <p class="card-text mt-3 mb-1">Qtd.: {{ product.quantitykg }}Kg</p>
+                    <p class="card-text mt-3 mb-1">Qtd.: {{ product.quantity }}Kg</p>
                     <p class="card-text">R${{ product.price }}</p>
                     <a class="btn corBotao text-white mb-4 mr-2"
-                        [routerLink]="['/detalhe-produto', product.id]">Detalhes</a>
+                        [routerLink]="['/product-detail', product.id]">Detail</a>
                 </div>
             </div>
         </div>
