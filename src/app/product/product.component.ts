@@ -61,7 +61,8 @@ export class ProductComponent implements OnInit {
     })
   }
 
-  publicar() {
+  
+  publish() {
     this.feedstock.id = this.idFeedstock
     this.product.feedstock = this.feedstock
 
